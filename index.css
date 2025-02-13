@@ -6,10 +6,10 @@
   display: none;
 }
 
-html,
+/* html,
 body {
   overflow-x: hidden;
-}
+} */
 
 a {
   color: unset;
@@ -59,7 +59,7 @@ button:hover {
   color: #7dde9c !important;
   font-weight: 500;
   border-radius: 100px;
-  font-size: 0.85rem;
+  font-size: 0.98rem;
   margin: auto auto 20px auto;
   width: max-content;
 }
@@ -152,11 +152,15 @@ h1 {
 
 .services-card-container .card {
   border: none;
-  background-color: rgba(78, 90, 244, 0.1) !important;
+  background-color: transparent;
   padding: 20px;
   margin: 10px;
   width: 33.33%;
   border-radius: 20px;
+}
+
+.services-card-container .card:hover {
+  box-shadow: 0px 4px 19.2px 2px #00000012;
 }
 
 .services-card-container .card img {
@@ -174,6 +178,36 @@ h1 {
   font-weight: 200;
   line-height: 24px;
   color: #434343;
+  font-weight: 500;
+}
+
+/* Model Section */
+.model-section {
+  padding-bottom: 50px;
+}
+
+.model-section .container > p {
+  font-weight: 500;
+  color: #434343;
+}
+
+.model-section .card {
+  padding: 10px 15px;
+  border-radius: 15px;
+  color: #434343;
+  width: 33.33%;
+  border: 1px solid #43434320;
+}
+
+.model-section .card:hover {
+  border: 1px solid #434343;
+}
+
+.model-section .card h4 {
+  font-weight: 600;
+}
+.model-section .card p {
+  opacity: 0.7;
   font-weight: 500;
 }
 
@@ -221,6 +255,15 @@ h1 {
   overflow-x: scroll;
 }
 
+@keyframes scrollSlider {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .testimonial-slider .card {
   border: none;
   padding: 20px;
@@ -232,6 +275,7 @@ h1 {
   flex-direction: column;
   gap: 24px;
   background-color: rgba(78, 90, 244, 0.1);
+  animation: scrollSlider 20s linear infinite;
 }
 
 .testimonial-slider .card .review {
@@ -383,11 +427,16 @@ footer .socials a:hover {
 
 @media screen and (max-width: 1000px) {
   /* Hero Section */
-  .hero-section .image-section {
-    display: none;
+  .hero-section {
+    height: max-content;
   }
   .hero-section .container {
     justify-content: center;
+    flex-direction: column-reverse;
+  }
+  .hero-section .image-section {
+    position: static;
+    overflow: visible;
   }
   .hero-section .content br {
     display: block;
@@ -405,6 +454,16 @@ footer .socials a:hover {
   /* Services Section */
   .services-section h2 br {
     display: none;
+  }
+  /* Model Section */
+  .model-section .container > .d-flex {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .model-section .card {
+    width: 200px;
   }
   /* Features Section */
   .how-we-work-image-container {
@@ -444,6 +503,10 @@ footer .socials a:hover {
   .services-card-container .card {
     width: 300px;
   }
+  /* Model section */
+  .model-section .container > p br {
+    display: none;
+  }
   /* Form */
   .form-section .container > p br {
     display: none;
@@ -472,6 +535,9 @@ footer .socials a:hover {
   .hero-section p {
     font-size: 0.9rem;
     line-height: 24px;
+  }
+  .hero-section .image-section {
+    width: 100%;
   }
 
   /* Testimonial Section */
