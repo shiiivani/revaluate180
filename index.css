@@ -192,15 +192,13 @@ h1 {
   border-radius: 15px;
   color: #434343;
   width: 33.33%;
-  border: 1px solid #43434320;
-}
-
-.model-section .card:hover {
-  border: 1px solid #434343;
+  border: none;
+  box-shadow: 0px 4px 19.2px 2px #00000012;
 }
 
 .model-section .card h4 {
   font-weight: 600;
+  font-size: 1.2rem !important;
 }
 .model-section .card p {
   opacity: 0.7;
@@ -554,6 +552,22 @@ footer .socials a:hover {
 }
 
 @media screen and (max-width: 500px) {
+  /* Model Section */
+  .model-section .container > .d-flex {
+    gap: 10px !important;
+  }
+  .model-section .card {
+    width: 180px;
+  }
+  .model-section .card img {
+    width: 50px;
+  }
+  .model-section .card h4 {
+    font-size: 1.05rem !important;
+  }
+  .model-section .card p {
+    font-size: 0.9rem;
+  }
   /* Form */
   .form-section form {
     width: 95%;
