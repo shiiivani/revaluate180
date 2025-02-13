@@ -585,3 +585,9 @@ footer .socials a:hover {
     display: none;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .model-section .card {
+    width: 95%;
+  }
+}
