@@ -45,7 +45,7 @@ input[type="number"] {
 .section h2 {
   font-weight: 700;
   font-size: 2.2rem;
-  color: rgba(78, 90, 244, 1);
+  color: #434343;
   line-height: 45px;
 }
 
@@ -84,7 +84,7 @@ header button {
 /* Hero Section */
 h1 {
   font-weight: 700;
-  color: rgba(78, 90, 244, 1);
+  color: #434343;
   font-size: 3rem;
   line-height: 60px;
 }
@@ -139,7 +139,7 @@ h1 {
 
 .services-section .container > p {
   color: #434343;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 24px;
 }
 .services-card-container {
@@ -166,7 +166,7 @@ h1 {
 .services-card-container .card h6 {
   font-weight: 600;
   font-size: 1.15rem;
-  color: rgba(78, 90, 244, 1);
+  color: #434343;
 }
 
 .services-card-container .card p {
@@ -273,7 +273,7 @@ h1 {
 }
 
 .testimonial-slider .card .review {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 0.95rem;
   color: #434343;
   flex: 1;
@@ -281,11 +281,11 @@ h1 {
 
 .testimonial-slider .card .author {
   font-weight: 600;
-  color: rgba(78, 90, 244, 1);
+  color: #434343;
 }
 
 .testimonial-slider .card .designation {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 0.8rem;
   color: #434343;
 }
