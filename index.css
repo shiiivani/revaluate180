@@ -247,7 +247,7 @@ h1 {
   overflow-x: scroll;
 }
 
-.testimonial-slider .card {
+.testimonial-section .card {
   border: none;
   padding: 20px;
   border-radius: 15px;
@@ -260,19 +260,19 @@ h1 {
   background-color: #fafafe;
 }
 
-.testimonial-slider .card .review {
+.testimonial-section .card .review {
   font-weight: 500;
   font-size: 0.95rem;
   color: #434343;
   flex: 1;
 }
 
-.testimonial-slider .card .author {
+.testimonial-section .card .author {
   font-weight: 600;
   color: #434343;
 }
 
-.testimonial-slider .card .designation {
+.testimonial-section .card .designation {
   font-weight: 400;
   font-size: 0.8rem;
   color: #434343;
@@ -285,6 +285,14 @@ h1 {
 .testimonial-section .navigator img:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+
+.testimonial-section .splide__pagination {
+  bottom: -2em !important;
+}
+
+.splide__pagination__page.is-active {
+  background-color: #434343 !important;
 }
 
 /* Form Section */
@@ -526,6 +534,12 @@ footer .socials a:hover {
   }
 }
 
+@media screen and (min-width: 550px) {
+  .testimonial-section .image-carousel {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 550px) {
   .section h2 {
     font-size: 2rem;
@@ -554,12 +568,13 @@ footer .socials a:hover {
   }
 
   /* Testimonial Section */
-  .testimonial-slider .card {
+  .testimonial-section .testimonial-slider {
+    display: none !important;
+  }
+  .testimonial-section .card {
     width: 95%;
   }
-  .testimonial-slider .card:first-child {
-    margin-left: 10px;
-  }
+
   /* Footer */
   footer {
     margin-top: 80px;

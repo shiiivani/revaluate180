@@ -39,35 +39,62 @@ document.addEventListener("DOMContentLoaded", function () {
   const slider = document.querySelector(".testimonial-slider");
   const slideRightBtn = document.getElementById("slideRightBtn");
   const slideLeftBtn = document.getElementById("slideLeftBtn");
-  if (window.innerWidth > 900) {
+  if (window.innerWidth > 400 && window.innerWidth < 450) {
     slideRightBtn.addEventListener("click", function () {
       slideLeftBtn.classList.remove("hidden");
       slider.scrollBy({
-        left: 320,
+        left: 430,
         behavior: "smooth",
       });
     });
 
     slideLeftBtn.addEventListener("click", function () {
       slider.scrollBy({
-        left: -320,
+        left: -430,
         behavior: "smooth",
       });
     });
-  } else {
+  } else if (window.innerWidth < 400 && window.innerWidth > 380) {
     slideRightBtn.addEventListener("click", function () {
       slideLeftBtn.classList.remove("hidden");
       slider.scrollBy({
-        left: 300,
+        left: 400,
         behavior: "smooth",
       });
     });
 
     slideLeftBtn.addEventListener("click", function () {
       slider.scrollBy({
-        left: -300,
+        left: -400,
+        behavior: "smooth",
+      });
+    });
+  } else if (window.innerWidth < 380) {
+    slideRightBtn.addEventListener("click", function () {
+      slideLeftBtn.classList.remove("hidden");
+      slider.scrollBy({
+        left: 380,
+        behavior: "smooth",
+      });
+    });
+
+    slideLeftBtn.addEventListener("click", function () {
+      slider.scrollBy({
+        left: -380,
         behavior: "smooth",
       });
     });
   }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide("#splideCarousel", {
+    type: "loop",
+    perPage: 1,
+    perMove: 1,
+    autoplay: true,
+    interval: 3000,
+    pagination: true,
+    arrows: false,
+  }).mount();
 });
