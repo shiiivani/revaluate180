@@ -33,3 +33,41 @@ document.querySelector("form").addEventListener("submit", function (e) {
   alert("Form submitted successfully!");
   e.target.submit();
 });
+
+// Testimonial Slider
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.querySelector(".testimonial-slider");
+  const slideRightBtn = document.getElementById("slideRightBtn");
+  const slideLeftBtn = document.getElementById("slideLeftBtn");
+  if (window.innerWidth > 900) {
+    slideRightBtn.addEventListener("click", function () {
+      slideLeftBtn.classList.remove("hidden");
+      slider.scrollBy({
+        left: 320,
+        behavior: "smooth",
+      });
+    });
+
+    slideLeftBtn.addEventListener("click", function () {
+      slider.scrollBy({
+        left: -320,
+        behavior: "smooth",
+      });
+    });
+  } else {
+    slideRightBtn.addEventListener("click", function () {
+      slideLeftBtn.classList.remove("hidden");
+      slider.scrollBy({
+        left: 300,
+        behavior: "smooth",
+      });
+    });
+
+    slideLeftBtn.addEventListener("click", function () {
+      slider.scrollBy({
+        left: -300,
+        behavior: "smooth",
+      });
+    });
+  }
+});

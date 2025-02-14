@@ -278,6 +278,15 @@ h1 {
   color: #434343;
 }
 
+.testimonial-section .navigator img {
+  transition: transform 0.3s ease;
+}
+
+.testimonial-section .navigator img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 /* Form Section */
 .form-section .container > p {
   font-weight: 500;
@@ -331,6 +340,7 @@ form button {
   font-weight: 500;
   transition: border-radius 0.3s ease;
   font-size: 1.15rem;
+  width: 100%;
 }
 
 /* Footer */
@@ -472,6 +482,15 @@ footer .socials a:hover {
   }
 }
 
+@media screen and (min-width: 767px) {
+  .partner-section .logo-slider img:nth-child(5),
+  .partner-section .logo-slider img:nth-child(6),
+  .partner-section .logo-slider img:nth-child(7),
+  .partner-section .logo-slider img:nth-child(8) {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 767px) {
   /* Navbar */
   .nav-middle {
@@ -482,8 +501,16 @@ footer .socials a:hover {
     display: none;
   }
   .partner-section .logo-slider {
-    overflow-x: auto;
-    justify-content: start !important;
+    animation: scrollLogos 15s linear infinite;
+  }
+
+  @keyframes scrollLogos {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
   /* Services Section */
   .services-card-container .card {
@@ -539,11 +566,15 @@ footer .socials a:hover {
   }
 }
 
+@media screen and (min-width: 500px) {
+  /* Testimonial Section */
+  .testimonial-section .navigator {
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: 500px) {
   /* Model Section */
-  .model-section .container > .d-flex {
-    gap: 10px !important;
-  }
   .model-section .card {
     width: 180px;
   }
