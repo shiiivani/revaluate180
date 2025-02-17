@@ -3,6 +3,8 @@ document.querySelector("form").addEventListener("submit", async function (e) {
 
   const form = this;
   const submitButton = form.querySelector("button[type='submit']");
+  const successAlert = form.querySelector(".success-alert");
+  const errorAlert = form.querySelector(".error-alert");
 
   // Show loader inside the button & disable it
   submitButton.innerHTML = `<div class="spinner-border" role="status"></div>`;
@@ -35,22 +37,39 @@ document.querySelector("form").addEventListener("submit", async function (e) {
 
   if (name === "") {
     nameError.classList.remove("d-none");
+    setTimeout(() => {
+      nameError.classList.add("d-none");
+    }, 2000);
     hasError = true;
   }
   if (email === "" || !emailRegex.test(email)) {
     emailError.classList.remove("d-none");
+    setTimeout(() => {
+      emailError.classList.add("d-none");
+    }, 2000);
     hasError = true;
   }
   if (phone !== "" && (isNaN(phone) || phone.length < 10)) {
+    setTimeout(() => {
+      emailError.classList.add("d-none");
+    }, 2000);
     phoneError.classList.remove("d-none");
     hasError = true;
   }
   if (company === "") {
     companyError.classList.remove("d-none");
+    setTimeout(() => {
+      companyError.classList.add("d-none");
+    }, 2000);
+
     hasError = true;
   }
   if (job === "") {
     jobError.classList.remove("d-none");
+    setTimeout(() => {
+      jobError.classList.add("d-none");
+    }, 2000);
+
     hasError = true;
   }
 
@@ -75,10 +94,18 @@ document.querySelector("form").addEventListener("submit", async function (e) {
       throw new Error("Failed to send email");
     }
 
-    alert("Form submitted successfully!");
+    successAlert.classList.add("active");
+
+    setTimeout(() => {
+      successAlert.classList.remove("active");
+    }, 2000);
     form.reset();
   } catch (error) {
-    alert("Error submitting form. Please try again.");
+    // alert("Error submitting form. Please try again.");
+    errorAlert.classList.add("active");
+    setTimeout(() => {
+      errorAlert.classList.remove("active");
+    }, 2000);
   } finally {
     submitButton.innerHTML = "Submit"; // Reset button text
     submitButton.disabled = false;

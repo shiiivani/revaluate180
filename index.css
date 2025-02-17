@@ -312,6 +312,41 @@ h1 {
   width: 450px;
 }
 
+.form-section .success-alert,
+.form-section .error-alert {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: -200px;
+  left: 0px;
+  z-index: 1000;
+  transition: top 0.5s ease;
+}
+
+.form-section .success-alert.active,
+.form-section .error-alert.active {
+  top: 100px;
+}
+
+.form-section .success-alert-inner,
+.form-section .error-alert-inner {
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  width: max-content;
+  margin: auto;
+}
+
+.form-section .success-alert-inner {
+  border: 1px solid #7dde9c;
+  background-color: #ffffff;
+}
+
+.form-section .error-alert-inner {
+  border: 1px solid red;
+  background-color: #ffffff;
+}
+
 .form-section .container {
   margin-top: 30px;
 }
