@@ -31,6 +31,10 @@ input:focus {
   outline: none;
 }
 
+.grecaptcha-badge {
+  display: none !important;
+}
+
 /* Hide arrows in most modern browsers */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {

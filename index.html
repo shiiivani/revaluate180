@@ -158,7 +158,6 @@
                             Submit
                         </button> -->
                         <button type="submit" class="mt-3">Submit</button>
-
                     </form>
                 </div>
             </div>
@@ -601,7 +600,10 @@
                         <input type="text" placeholder="Enter Job Title" id="job" name="job" required>
                         <p class="error job-error d-none">Please enter your job title</p>
                     </div>
-                    <!-- <div class="g-recaptcha" data-sitekey="6Ld4v9kqAAAAAK94dLOXPjcXr_pxdMSlKZ9vGEVn"></div> -->
+                    <!-- <button class="g-recaptcha" data-sitekey="6Ld4v9kqAAAAAK94dLOXPjcXr_pxdMSlKZ9vGEVn"
+                        data-callback='onSubmit' data-action='submit'>
+                        Submit
+                    </button> -->
                     <button type="submit" class="mt-3">Submit</button>
                 </form>
             </div>
@@ -701,9 +703,7 @@
     });
 </script> -->
 <script>
-    function onSubmit(token) {
-        document.getElementById("demo-form").submit();
-    }
+
 </script>
 <script src="./index.js"></script>
 
