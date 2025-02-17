@@ -80,7 +80,7 @@ document.querySelector("form").addEventListener("submit", async function (e) {
   }
 
   // Send data via POST request
-  const endpoint = "YOUR_ENDPOINT_HERE"; // Replace with actual endpoint
+  const endpoint = "https://training.revaluate180.com/create-lead/"; // Replace with actual endpoint
   const formData = { name, email, phone, company, job };
 
   try {
