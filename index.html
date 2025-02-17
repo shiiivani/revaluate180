@@ -22,35 +22,140 @@
 </head>
 
 <body>
-    <header class="container">
-        <nav class="d-flex align-items-center justify-content-between">
-            <div class="nav-left">
-                <img src="./images/logo.webp" width="150px" alt="Logo">
-            </div>
-            <!-- <div class="nav-middle">
+    <header>
+        <div class="container">
+            <nav class="d-flex align-items-center justify-content-between">
+                <div class="nav-left">
+                    <img src="./images/logo.webp" width="150px" alt="Logo">
+                </div>
+                <!-- <div class="nav-middle">
                 <ul class="d-flex align-items-center gap-4">
                     <li><a href="#services">Services</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#testimonial">Testimonial</a></li>
                 </ul>
             </div> -->
-            <div class="nav-right">
-                <a href="#form"><button>Get Started</button></a>
-            </div>
-        </nav>
+                <div class="nav-right">
+                    <a href="#form1"><button>Get Started</button></a>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
+        <!-- Form section starts-->
+        <div id="form1" class="form-section section d-flex align-items-center justify-content-center flex-column">
+            <p class="header-tag">Contact</p>
+            <h2>Let's Get Started!</h2>
+            <p class="text-center fw-medium"> Space is limited — fill out the form below to start treating<br> employee
+                decisions
+                more
+                comprehensively!</p>
+            <div class="container d-flex justify-content-between align-items-start ">
+                <div class="content-container">
+                    <ul>
+                        <ul>
+                            <li>
+                                <img src="./images/tick.png" width="25px" alt="">
+                                <p>
+                                    <span class="fw-semibold">Bad hires can cost up to 3 times the amount of an
+                                        employee’s
+                                        annual salary.</span> Instead, use data-driven reports to make effective hires
+                                    and
+                                    reduce expensive turnover.
+                                </p>
+                            </li>
+                            <li>
+                                <img src="./images/tick.png" width="25px" alt="">
+                                <p>
+                                    Incorrect hiring decisions can also lead to lost productivity, drops in morale, and
+                                    high
+                                    turnover, significantly hurting your bottom line.</p>
+                            </li>
+                            <li>
+                                <img src="./images/tick.png" width="25px" alt="">
+                                <p>
+                                    Say goodbye to making hires based on gut feelings and <span
+                                        class="fw-semibold">adopt an
+                                        approach backed by science and research.</span> Utilize bespoke, data-driven
+                                    reports
+                                    to lead to effective hiring and reductions in expensive turnover.</p>
+                            </li>
+                            <li>
+                                <img src="./images/tick.png" width="25px" alt="">
+                                <p>
+                                    The R180 platform leverages <span class="fw-semibold">cutting-edge analytics
+                                        software</span> to provide in-depth, AI-powered reports and psychology-backed
+                                    programs that assist in identifying top candidates, predicting future performance,
+                                    and
+                                    building high-performing teams.</p>
+                            </li>
+                            <li>
+                                <img src="./images/tick.png" width="25px" alt="">
+                                <p>
+                                    Our comprehensive suite of services is <span class="fw-semibold">designed for the
+                                        entire
+                                        employee lifecycle,</span> ensuring innovative ideas are implemented with
+                                    precision
+                                    and are grounded in sound research and effective communication.</p>
+                            </li>
+                            <li>
+                                <img src="./images/tick.png" width="25px" alt="">
+                                <p>
+                                    For a limited time, you can get exclusive access to all R180 has to offer at a
+                                    special
+                                    price so you can create aligned, collaborative, and high-performing teams.</p>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="form-container">
+                    <form>
+                        <div class="input-group">
+                            <label for="name">NAME*</label>
+                            <input type="text" placeholder="Enter Full Name" id="name" name="name" required>
+                            <p class="error name-error d-none">Please enter your full name</p>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">EMAIL*</label>
+                            <input type="email" placeholder="Enter Email Address" id="email" name="email" required>
+                            <p class="error email-error d-none">Please enter a valid email address</p>
+                        </div>
+                        <div class="input-group">
+                            <label for="phone-number">PHONE NUMBER</label>
+                            <input type="number" placeholder="Enter Phone Number" id="phone-number" name="phone-number">
+                            <p class="error phone-number-error d-none">Please enter a valid phone number with at least
+                                10
+                                digits</p>
+                        </div>
+                        <div class="input-group">
+                            <label for="company">COMPANY NAME*</label>
+                            <input type="text" placeholder="Enter Company Name" id="company" name="company" required>
+                            <p class="error company-error d-none">Please enter your company name</p>
+                        </div>
+                        <div class="input-group">
+                            <label for="job">JOB TITLE*</label>
+                            <input type="text" placeholder="Enter Job Title" id="job" name="job" required>
+                            <p class="error job-error d-none">Please enter your job title</p>
+                        </div>
+                        <button type="submit" class="mt-3">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Form section ends-->
+
         <!-- Hero Section Starts -->
-        <div class="hero-section pt-5">
+        <div class="hero-section section">
             <div class="container d-flex align-items-center gap-5">
                 <div class="content d-flex flex-column text-left">
-                    <h1>Driving Data-Driven Success <br>Across Your Organization <br>with AI-Powered Insights</h1>
-                    <p>The R180 platform uses advanced analytics and AI-powered reports,<br> along with
-                        psychology-backed
-                        programs, to identify top candidates.</p>
+                    <h1>Driving Data-Driven Success<br> Across Your Organization<br> with Powerful Insights</h1>
+                    <p>The R180 platform uses advanced analytics and AI to identify<br> top candidates and optimize team
+                        performance.
+                    </p>
                     <!-- <button>Explore</button> -->
                     <div class="partner-section">
+                        <h3>TRUSTED BY</h3>
                         <div class="logo-slider d-flex align-items-center justify-content-start">
                             <img src="./images/client-logo-1.png" width="60px" alt="">
                             <img src="./images/client-logo-2.png" width="120px" alt="">
@@ -70,11 +175,52 @@
         </div>
         <!-- Hero Section Ends -->
 
+        <!-- Features section Starts -->
+        <div id="features" class="features-section section d-flex align-items-center justify-content-center">
+            <div class="container d-flex align-items-center justify-content-center gap-5">
+                <div class="features-image-container">
+                    <img src="./images/how-we-work-img.jpg" alt="">
+                </div>
+                <div class="features-content-container">
+                    <p class="header-tag">Features</p>
+                    <h2> Make Smarter Hiring Decisions with Data-Backed Insights</h2>
+                    <ul>
+                        <li>
+                            <img src="./images/tick.png" width="25px" alt="">
+                            Reduces costly turnover by using data-driven reports for effective hiring decisions.
+                        </li>
+                        <li>
+                            <img src="./images/tick.png" width="25px" alt="">
+                            Eliminates guesswork in hiring by leveraging psychology-backed insights and analytics.
+                        </li>
+                        <li>
+                            <img src="./images/tick.png" width="25px" alt="">
+                            Identifies top candidates and predicts future performance with data-powered assessments.
+                        </li>
+                        <li>
+                            <img src="./images/tick.png" width="25px" alt="">
+                            Builds high-performing teams by aligning hiring strategies with organizational goals.
+                        </li>
+                        <li>
+                            <img src="./images/tick.png" width="25px" alt="">
+                            Enhances employee engagement and productivity through targeted development programs.
+                        </li>
+                        <li>
+                            <img src="./images/tick.png" width="25px" alt="">
+                            Provides continuous feedback and data-driven insights for long-term organizational success.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Features section Ends -->
+
         <!-- Services Section Starts -->
         <div id="services" class="services-section section d-flex align-items-center justify-content-center">
             <div class="container">
                 <p class="header-tag">Services We Offer</p>
-                <h2 class="text-center">Comprehensive Employee Lifecycle Solutions<br> Backed by Research and Precision
+                <h2 class="text-center">
+                    Comprehensive Employee Lifecycle Solutions<br> Backed by Data and Psychology
                 </h2>
                 <!-- <p class="text-center mb-4"> Our services cover the entire employee lifecycle, ensuring innovative
                     ideas<br>
@@ -146,46 +292,6 @@
             </div>
         </div>
         <!-- Modal Section Ends -->
-
-        <!-- How we work section Starts -->
-        <div id="features" class="how-we-work-section section d-flex align-items-center justify-content-center">
-            <div class="container d-flex align-items-center justify-content-center gap-5">
-                <div class="how-we-work-image-container">
-                    <img src="./images/how-we-work-img.jpg" alt="">
-                </div>
-                <div class="how-we-work-content-container">
-                    <p class="header-tag">Features</p>
-                    <h2>Make Smarter Hiring Decisions with AI-Powered Insights</h2>
-                    <ul>
-                        <li>
-                            <img src="./images/tick.png" width="25px" alt="">
-                            Reduces costly turnover by using data-driven reports for effective hiring decisions.
-                        </li>
-                        <li>
-                            <img src="./images/tick.png" width="25px" alt="">
-                            Eliminates guesswork in hiring by leveraging science-backed insights and analytics.
-                        </li>
-                        <li>
-                            <img src="./images/tick.png" width="25px" alt="">
-                            Identifies top candidates and predicts future performance with AI-powered assessments.
-                        </li>
-                        <li>
-                            <img src="./images/tick.png" width="25px" alt="">
-                            Builds high-performing teams by aligning hiring strategies with organizational goals.
-                        </li>
-                        <li>
-                            <img src="./images/tick.png" width="25px" alt="">
-                            Enhances employee engagement and productivity through targeted development programs.
-                        </li>
-                        <li>
-                            <img src="./images/tick.png" width="25px" alt="">
-                            Provides continuous feedback and data-driven insights for long-term organizational success.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- How we work section Ends -->
 
         <!-- Testimonial Section Starts -->
         <div id="testimonial" class="testimonial-section section d-flex align-items-center justify-content-center">
@@ -427,36 +533,103 @@
         <!-- Testimonial Section Ends -->
 
         <!-- Form section starts-->
-        <div id="form" class="form-section section d-flex align-items-center justify-content-center">
-            <div class="container text-center">
-                <p class="header-tag">Contact</p>
-                <h2>Let's Get Started!</h2>
-                <p>Space is limited! Don’t miss the opportunity to enhance your employee
-                    decision-making<br> process with data-driven insights. Fill out
-                    the form by clicking below to get started.</p>
-                <form>
-                    <div class="input-group">
-                        <label for="name">NAME*</label>
-                        <input type="text" placeholder="Enter Full Name" id="name" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="email">EMAIL*</label>
-                        <input type="email" placeholder="Enter Email Address" id="email" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="phone-number">PHONE NUMBER</label>
-                        <input type="number" placeholder="Enter Phone Number" id="phone-number">
-                    </div>
-                    <div class="input-group">
-                        <label for="company">COMPANY NAME*</label>
-                        <input type="text" placeholder="Enter Company Name" id="company" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="job">JOB TITLE*</label>
-                        <input type="text" placeholder="Enter Job Title" id="job" required>
-                    </div>
-                    <button type="submit" class="mt-3">Submit</button>
-                </form>
+        <div id="form2" class="form-section section d-flex align-items-center justify-content-center flex-column">
+            <p class="header-tag">Contact</p>
+            <h2>Let's Get Started!</h2>
+            <p class="text-center fw-medium"> Space is limited — fill out the form below to start treating<br> employee
+                decisions
+                more
+                comprehensively!</p>
+            <div class="container d-flex justify-content-between align-items-start ">
+                <div class="content-container">
+                    <ul>
+                        <ul>
+                            <li>
+                                <img src="./images/tick.png" width="25px" alt="">
+                                <p>
+                                    <span class="fw-semibold">Bad hires can cost up to 3 times the amount of an
+                                        employee’s
+                                        annual salary.</span> Instead, use data-driven reports to make effective hires
+                                    and
+                                    reduce expensive turnover.
+                                </p>
+                            </li>
+                            <li>
+                                <img src="./images/tick.png" width="25px" alt="">
+                                <p>
+                                    Incorrect hiring decisions can also lead to lost productivity, drops in morale, and
+                                    high
+                                    turnover, significantly hurting your bottom line.</p>
+                            </li>
+                            <li>
+                                <img src="./images/tick.png" width="25px" alt="">
+                                <p>
+                                    Say goodbye to making hires based on gut feelings and <span
+                                        class="fw-semibold">adopt an
+                                        approach backed by science and research.</span> Utilize bespoke, data-driven
+                                    reports
+                                    to lead to effective hiring and reductions in expensive turnover.</p>
+                            </li>
+                            <li>
+                                <img src="./images/tick.png" width="25px" alt="">
+                                <p>
+                                    The R180 platform leverages <span class="fw-semibold">cutting-edge analytics
+                                        software</span> to provide in-depth, AI-powered reports and psychology-backed
+                                    programs that assist in identifying top candidates, predicting future performance,
+                                    and
+                                    building high-performing teams.</p>
+                            </li>
+                            <li>
+                                <img src="./images/tick.png" width="25px" alt="">
+                                <p>
+                                    Our comprehensive suite of services is <span class="fw-semibold">designed for the
+                                        entire
+                                        employee lifecycle,</span> ensuring innovative ideas are implemented with
+                                    precision
+                                    and are grounded in sound research and effective communication.</p>
+                            </li>
+                            <li>
+                                <img src="./images/tick.png" width="25px" alt="">
+                                <p>
+                                    For a limited time, you can get exclusive access to all R180 has to offer at a
+                                    special
+                                    price so you can create aligned, collaborative, and high-performing teams.</p>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="form-container">
+                    <form>
+                        <div class="input-group">
+                            <label for="name">NAME*</label>
+                            <input type="text" placeholder="Enter Full Name" id="name" name="name" required>
+                            <p class="error name-error d-none">Please enter your full name</p>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">EMAIL*</label>
+                            <input type="email" placeholder="Enter Email Address" id="email" name="email" required>
+                            <p class="error email-error d-none">Please enter a valid email address</p>
+                        </div>
+                        <div class="input-group">
+                            <label for="phone-number">PHONE NUMBER</label>
+                            <input type="number" placeholder="Enter Phone Number" id="phone-number" name="phone-number">
+                            <p class="error phone-number-error d-none">Please enter a valid phone number with at least
+                                10
+                                digits</p>
+                        </div>
+                        <div class="input-group">
+                            <label for="company">COMPANY NAME*</label>
+                            <input type="text" placeholder="Enter Company Name" id="company" name="company" required>
+                            <p class="error company-error d-none">Please enter your company name</p>
+                        </div>
+                        <div class="input-group">
+                            <label for="job">JOB TITLE*</label>
+                            <input type="text" placeholder="Enter Job Title" id="job" name="job" required>
+                            <p class="error job-error d-none">Please enter your job title</p>
+                        </div>
+                        <button type="submit" class="mt-3">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
         <!-- Form section ends-->

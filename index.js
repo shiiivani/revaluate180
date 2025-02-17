@@ -1,37 +1,48 @@
-document.querySelector("form").addEventListener("submit", function (e) {
-  e.preventDefault();
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const phone = document.getElementById("phone-number").value.trim();
-  const company = document.getElementById("company").value.trim();
-  const job = document.getElementById("job").value.trim();
+    const name = this.querySelector("[name='name']").value.trim();
+    const email = this.querySelector("[name='email']").value.trim();
+    const phone = this.querySelector("[name='phone-number']").value.trim();
+    const company = this.querySelector("[name='company']").value.trim();
+    const job = this.querySelector("[name='job']").value.trim();
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const nameError = this.querySelector(".name-error");
+    const emailError = this.querySelector("email-error");
+    const phoneError = this.querySelector(".phone-number-error");
+    const companyError = this.querySelector(".company-error");
+    const jobError = this.querySelector(".job-error");
 
-  if (name === "") {
-    alert("Please enter your full name.");
-    return;
-  }
-  if (email === "" || !emailRegex.test(email)) {
-    alert("Please enter a valid email address.");
-    return;
-  }
-  if (phone !== "" && (isNaN(phone) || phone.length < 10)) {
-    alert("Please enter a valid phone number with at least 10 digits.");
-    return;
-  }
-  if (company === "") {
-    alert("Please enter your company name.");
-    return;
-  }
-  if (job === "") {
-    alert("Please enter your job title.");
-    return;
-  }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  alert("Form submitted successfully!");
-  e.target.submit();
+    if (name === "") {
+      nameError.classList.remove("d-none");
+      return;
+    }
+    if (email === "" || !emailRegex.test(email)) {
+      emailError.classList.remove("d-none");
+      return;
+    }
+    if (
+      phone !== "" &&
+      (isNaN(phone) || phone.length < 10 || phone.length > 10)
+    ) {
+      phoneError.classList.remove("d-none");
+      return;
+    }
+    if (company === "") {
+      companyError.classList.remove("d-none");
+      return;
+    }
+    if (job === "") {
+      jobError.classList.remove("d-none");
+      return;
+    }
+
+    alert("Form submitted successfully!");
+    e.target.submit();
+  });
 });
 
 // Testimonial Slider
