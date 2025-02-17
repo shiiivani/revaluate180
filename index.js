@@ -1,48 +1,88 @@
-document.querySelectorAll("form").forEach((form) => {
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+document.querySelector("form").addEventListener("submit", async function (e) {
+  e.preventDefault();
 
-    const name = this.querySelector("[name='name']").value.trim();
-    const email = this.querySelector("[name='email']").value.trim();
-    const phone = this.querySelector("[name='phone-number']").value.trim();
-    const company = this.querySelector("[name='company']").value.trim();
-    const job = this.querySelector("[name='job']").value.trim();
+  const form = this;
+  const submitButton = form.querySelector("button[type='submit']");
 
-    const nameError = this.querySelector(".name-error");
-    const emailError = this.querySelector("email-error");
-    const phoneError = this.querySelector(".phone-number-error");
-    const companyError = this.querySelector(".company-error");
-    const jobError = this.querySelector(".job-error");
+  // Show loader inside the button & disable it
+  submitButton.innerHTML = `<div class="spinner-border" role="status"></div>`;
+  submitButton.disabled = true;
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // Get form values
+  const name = form.querySelector("[name='name']").value.trim();
+  const email = form.querySelector("[name='email']").value.trim();
+  const phone = form.querySelector("[name='phone-number']").value.trim();
+  const company = form.querySelector("[name='company']").value.trim();
+  const job = form.querySelector("[name='job']").value.trim();
 
-    if (name === "") {
-      nameError.classList.remove("d-none");
-      return;
-    }
-    if (email === "" || !emailRegex.test(email)) {
-      emailError.classList.remove("d-none");
-      return;
-    }
-    if (
-      phone !== "" &&
-      (isNaN(phone) || phone.length < 10 || phone.length > 10)
-    ) {
-      phoneError.classList.remove("d-none");
-      return;
-    }
-    if (company === "") {
-      companyError.classList.remove("d-none");
-      return;
-    }
-    if (job === "") {
-      jobError.classList.remove("d-none");
-      return;
+  // Select error elements
+  const nameError = form.querySelector(".name-error");
+  const emailError = form.querySelector(".email-error");
+  const phoneError = form.querySelector(".phone-number-error");
+  const companyError = form.querySelector(".company-error");
+  const jobError = form.querySelector(".job-error");
+
+  // Clear previous errors
+  nameError.classList.add("d-none");
+  emailError.classList.add("d-none");
+  phoneError.classList.add("d-none");
+  companyError.classList.add("d-none");
+  jobError.classList.add("d-none");
+
+  // Validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  let hasError = false;
+
+  if (name === "") {
+    nameError.classList.remove("d-none");
+    hasError = true;
+  }
+  if (email === "" || !emailRegex.test(email)) {
+    emailError.classList.remove("d-none");
+    hasError = true;
+  }
+  if (phone !== "" && (isNaN(phone) || phone.length < 10)) {
+    phoneError.classList.remove("d-none");
+    hasError = true;
+  }
+  if (company === "") {
+    companyError.classList.remove("d-none");
+    hasError = true;
+  }
+  if (job === "") {
+    jobError.classList.remove("d-none");
+    hasError = true;
+  }
+
+  if (hasError) {
+    submitButton.innerHTML = "Submit"; // Reset button text
+    submitButton.disabled = false;
+    return;
+  }
+
+  // Send data via POST request
+  const endpoint = "YOUR_ENDPOINT_HERE"; // Replace with actual endpoint
+  const formData = { name, email, phone, company, job };
+
+  try {
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to send email");
     }
 
     alert("Form submitted successfully!");
-    e.target.submit();
-  });
+    form.reset();
+  } catch (error) {
+    alert("Error submitting form. Please try again.");
+  } finally {
+    submitButton.innerHTML = "Submit"; // Reset button text
+    submitButton.disabled = false;
+  }
 });
 
 // Testimonial Slider
